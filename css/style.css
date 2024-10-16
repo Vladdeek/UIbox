@@ -13,6 +13,7 @@ body {
 	background-color: var(--color2);
 	font-family: 'Roboto', sans-serif;
 }
+
 .title-bar {
 	position: fixed;
 	width: 100%;
@@ -94,6 +95,11 @@ h2 {
 	color: white;
 	background-color: rgba(0, 0, 0, 0);
 	border: none;
+}
+.auth-username{
+	color: white;
+	font-size: 15px;
+	margin-right: 1%;
 }
 .footer-text {
 	font-size: 12px;

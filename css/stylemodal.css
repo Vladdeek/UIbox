@@ -42,7 +42,7 @@ body {
 }
 .button2 {
 	position: absolute;
-	right: 40px;
+	right: 17px;
 	color: white;
 }
 label {
@@ -54,6 +54,15 @@ input[type='radio'] {
 	display: none;
 }
 input[name='auth'] {
+	margin-bottom: 20px;
+	border-radius: 10px;
+	border: solid 1px black;
+	height: 35px;
+	width: 275px;
+	text-align: start;
+	font-size: 15px;
+}
+input.logemail, input.password, input.regemail, input.password1, input.password2 {
 	margin-bottom: 20px;
 	border-radius: 10px;
 	border: solid 1px black;
