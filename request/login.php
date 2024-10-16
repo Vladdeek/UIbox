@@ -1,25 +1,27 @@
 <?php
 session_start();
-require_once 'db.php'; 
+require_once 'db.php';
+
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-    $email = $_POST['email'];
+    $login = $_POST['email']; // This can be email or username
     $password = $_POST['password'];
 
-   
-    $stmt = $conn->prepare("SELECT * FROM users WHERE email = ?");
-    $stmt->bind_param("s", $email);
+    $stmt = $conn->prepare("SELECT id, email, username, password FROM users WHERE email = ? OR username = ?");
+    $stmt->bind_param("ss", $login, $login);
     $stmt->execute();
     $result = $stmt->get_result();
-    $user = $result->fetch_assoc();
 
-    if ($user && password_verify($password, $user['password'])) {
-        $_SESSION['user'] = $user['email']; 
-        header('Location: ../index.php');
+    if ($user = $result->fetch_assoc()) {
+        if (password_verify($password, $user['password'])) {
+            $_SESSION['user'] = $user['username'];
+            header('Location: ../index.php');
+        } else {
+            echo "Неверный пароль!";
+        }
     } else {
-        echo "Неверный email или пароль!";
+        echo "Пользователь не найден!";
     }
 
     $stmt->close();
     $conn->close();
 }
-?>

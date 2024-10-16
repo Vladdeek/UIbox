@@ -4,6 +4,7 @@ session_start(); // тут начинается сессиия для сохра
 
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -15,6 +16,7 @@ session_start(); // тут начинается сессиия для сохра
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
 </head>
+
 <body>
     <!-- модальное окно для входа и регистрации -->
     <div class="container">
@@ -26,10 +28,10 @@ session_start(); // тут начинается сессиия для сохра
                         <div class="double_button">
                             <div class="float"></div>
                             <label class="button1">
-                                <input type="radio" name="db-b" checked="checked" onclick="Button1()"/> Логин
+                                <input type="radio" name="db-b" checked="checked" onclick="Button1()" /> Логин
                             </label>
                             <label class="button2">
-                                <input type="radio" name="db-b" onclick="Button2()"/> Регистрация
+                                <input type="radio" name="db-b" onclick="Button2()" /> Регистрация
                             </label>
                         </div>
                         <div class="auth text-center">
@@ -37,25 +39,27 @@ session_start(); // тут начинается сессиия для сохра
                             <form action="request/register.php" class="registration" method="POST">
                                 <div class="register">
                                     <p>Регистрация</p>
-                                    <input class="regemail" type="email" placeholder=" e-mail" name="email" id="email" required/>
-                                    <input class="password1" type="password" placeholder=" Пароль" name="password" id="password1" required/>
-                                    <input class="password2" type="password" placeholder=" Подтверждение пароля" name="password2" id="password2" required/>
+                                    <input class="regemail" type="email" placeholder=" e-mail" name="email" id="email" required />
+                                    <input class="password1" type="password" placeholder=" Пароль" name="password" id="password1" required />
+                                    <input class="password2" type="password" placeholder=" Подтверждение пароля" name="password2" id="password2" required />
+                                    <div class="error-message" id="reg-error-message"></div>
                                     <button class="subbtn" type="button" onclick="next()">Далее</button>
                                 </div>
-                                
+
                                 <div class="createusername">
                                     <p>Придумайте имя</p>
-                                    <input class="inputusername" type="text" placeholder=" McLovin" name="username" required/>
-                                    <input class="subbtn reg-sub-btn" type="submit" value="Подтвердить"/>
+                                    <input class="inputusername" type="text" placeholder=" McLovin" name="username" required />
+                                    <div class="error-message" id="username-error-message"></div>
+                                    <input class="subbtn reg-sub-btn" type="submit" value="Подтвердить" />
                                 </div>
                             </form>
 
                             <!-- форма авторизации -->
                             <form action="request/login.php" class="login" method="POST">
                                 <p>Авторизация</p>
-                                <input class="logemail" type="text" placeholder=" e-mail или username" name="email" required/>
-                                <input class="password" type="password" placeholder=" Пароль" name="password" required/>
-                                <input class="subbtn log-sub-btn" type="submit" value="Войти"/>
+                                <input class="logemail" type="text" placeholder=" e-mail или username" name="email" required />
+                                <input class="password" type="password" placeholder=" Пароль" name="password" required />
+                                <input class="subbtn log-sub-btn" type="submit" value="Войти" />
                             </form>
                         </div>
                     </div>
@@ -72,11 +76,9 @@ session_start(); // тут начинается сессиия для сохра
                     <div class="title-bar d-flex align-items-center justify-content-between">
                         <a href="" class="name">UIbox</a>
                         <?php if (isset($_SESSION['user'])): ?>
-                            <!-- если пользователь авторизован, показывать его email и кнопку выхода -->
-                            <span class="auth-username ms-auto"><?php echo $_SESSION['user']; ?></span>
+                            <span class="auth-username ms-auto"><?php echo htmlspecialchars($_SESSION['user']); ?></span>
                             <a href="request/logout.php" class="auth-btn ms-2">Выйти</a>
                         <?php else: ?>
-                            <!-- если пользователь не авторизован, показываем кнопку Вход | Регистрация -->
                             <button class="auth-btn ms-auto" onclick="modalanim()">Вход | Регистрация</button>
                         <?php endif; ?>
                     </div>
@@ -118,7 +120,7 @@ session_start(); // тут начинается сессиия для сохра
             <div class="row justify-content-center">
                 <div class="col-7 d-flex justify-content-center flex-column">
                     <div class="content flex-column justify-content-center d-flex">
-                        <img class="photo mx-auto" src="1.png" alt="EMPTY"/>
+                        <img class="photo mx-auto" src="1.png" alt="EMPTY" />
                         <h1 class="content-name text-start">Название продукта1</h1>
                         <h2 class="content-description text-start">
                             Описание — это краткое изложение основных характеристик или особенностей какого-либо предмета, события, ситуации или продукта. Оно помогает дать читателю или слушателю...
@@ -127,7 +129,7 @@ session_start(); // тут начинается сессиия для сохра
                     </div>
 
                     <div class="content flex-column justify-content-center d-flex">
-                        <img class="photo mx-auto" src="2.png" alt="EMPTY"/>
+                        <img class="photo mx-auto" src="2.png" alt="EMPTY" />
                         <h1 class="content-name text-start">Название продукта2</h1>
                         <h2 class="content-description text-start">
                             Описание — это краткое изложение основных характеристик или особенностей какого-либо предмета, события, ситуации или продукта. Оно помогает дать читателю или слушателю...
@@ -136,7 +138,7 @@ session_start(); // тут начинается сессиия для сохра
                     </div>
 
                     <div class="content flex-column justify-content-center d-flex">
-                        <img class="photo mx-auto" src="3.png" alt="EMPTY"/>
+                        <img class="photo mx-auto" src="3.png" alt="EMPTY" />
                         <h1 class="content-name text-start">Название продукта3</h1>
                         <h2 class="content-description text-start">
                             Описание — это краткое изложение основных характеристик или особенностей какого-либо предмета, события, ситуации или продукта. Оно помогает дать читателю или слушателю...
@@ -162,4 +164,5 @@ session_start(); // тут начинается сессиия для сохра
     <script src="js/bootstrap.bundle.min.js"></script>
     <script src="js/auth.ui.js"></script>
 </body>
+
 </html>
