@@ -44,8 +44,8 @@ session_start(); // тут начинается сессиия для сохра
                 <div class="col-10 d-flex justify-content-start align-items-center">
                     <img class="profile-photo" src="крутая_ава.webp" alt="empty">
                     <div class="profile-info">
-                        <p class="username">Username</p>
-                        <h2 class="reg-date">September 11, 2024</h2>
+                        <p class="username"><?php echo htmlspecialchars($_SESSION['user']); ?></p>
+                        <h2 class="reg-date"><?php echo htmlspecialchars($_SESSION['user_created_at']); ?></h2>
                     </div>
                 </div>
             </div>
@@ -54,8 +54,8 @@ session_start(); // тут начинается сессиия для сохра
             <div class="row justify-content-center">
                 <div class="col-xl-10 col-sm-12 d-flex justify-content-center">
                     <div class="section-bar">
-                        <a class="bar-button purchases-btn" onclick="showPurchases()">Purchases</a>
-                        <a class="bar-button self-project-btn" onclick="showSelfProjects()">My post</a>
+                        <a class="bar-button purchases-btn" onclick="showPurchases()">Покупки</a>
+                        <a class="bar-button self-project-btn" onclick="showSelfProjects()">Мои документы</a>
                     </div>
                 </div>
             </div>
