@@ -15,11 +15,15 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
     $hashedPassword = password_hash($password, PASSWORD_BCRYPT);
 
-    $stmt = $conn->prepare("INSERT INTO users (email, username, password) VALUES (?, ?, ?)");
-    $stmt->bind_param("sss", $email, $username, $hashedPassword);
+    // Get current timestamp
+    $createdAt = date('Y-m-d H:i:s');
+
+    $stmt = $conn->prepare("INSERT INTO users (email, username, password, created_at) VALUES (?, ?, ?, ?)");
+    $stmt->bind_param("ssss", $email, $username, $hashedPassword, $createdAt);
 
     if ($stmt->execute()) {
-        $_SESSION['user'] = $username; // Store username instead of email
+        $_SESSION['user'] = $username;
+        $_SESSION['user_created_at'] = $createdAt;
         header('Location: ../index.php');
     } else {
         echo "Ошибка регистрации!";
@@ -28,3 +32,4 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $stmt->close();
     $conn->close();
 }
+?>
