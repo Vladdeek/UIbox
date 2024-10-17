@@ -74,9 +74,9 @@ session_start(); // тут начинается сессиия для сохра
             <div class="row justify-content-center">
                 <div class="col-12 d-flex justify-content-center">
                     <div class="title-bar d-flex align-items-center justify-content-between">
-                        <a href="" class="name">UIbox</a>
+                        <a href="index.php" class="name">UIbox</a>
                         <?php if (isset($_SESSION['user'])): ?>
-                            <span class="auth-username ms-auto"><?php echo htmlspecialchars($_SESSION['user']); ?></span>
+                            <a href="personal.php" class="auth-username ms-auto"><?php echo htmlspecialchars($_SESSION['user']); ?></a>
                             <a href="request/logout.php" class="auth-btn ms-2">Выйти</a>
                         <?php else: ?>
                             <button class="auth-btn ms-auto" onclick="modalanim()">Вход | Регистрация</button>
@@ -90,10 +90,10 @@ session_start(); // тут начинается сессиия для сохра
             <div class="row justify-content-center">
                 <div class="col-xl-10 col-sm-12 d-flex justify-content-center">
                     <div class="lang-bar">
-                        <a class="lang-button" href="#html">HTML</a>
-                        <a class="lang-button" href="#css">CSS</a>
-                        <a class="lang-button" href="#js">JavaScript</a>
-                        <a class="lang-button" href="#other">Other</a>
+                        <a class="bar-button" href="#css">CSS</a>
+                        <a class="bar-button" href="#html">HTML</a>
+                        <a class="bar-button" href="#js">JavaScript</a>
+                        <a class="bar-button" href="#other">Other</a>
                     </div>
                 </div>
             </div>
@@ -118,7 +118,7 @@ session_start(); // тут начинается сессиия для сохра
 
         <div class="container">
             <div class="row justify-content-center">
-                <div class="col-7 d-flex justify-content-center flex-column">
+                <div class="col-xl-7 col-md-10 col-sm-12 d-flex justify-content-center flex-column">
                     <div class="content flex-column justify-content-center d-flex">
                         <img class="photo mx-auto" src="1.png" alt="EMPTY" />
                         <h1 class="content-name text-start">Название продукта1</h1>
