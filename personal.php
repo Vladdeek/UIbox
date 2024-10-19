@@ -11,13 +11,35 @@ session_start(); // тут начинается сессиия для сохра
     <title>UIbox</title>
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/stylemodal.css">
+    <link rel="stylesheet" href="css/styleimportmodal.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
 </head>
 
 <body>
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-12 d-flex justify-content-center">
+                <div class="blur-screen" onclick="hidemodal()"></div>
+                <div class="modal-window">
+                    <div class="modal-container text-center">
+                        <form action="">
+                            <p class="modal-text">Выберите фото профиля</p>
+                            <div class="upload d-flex flex-column align-items-center">
+                                <label for="file" class="upload-button">Загрузить фото</label>
+                                <input type="file" id="file" class="file-input" accept="image/*">
+                                <img id="imagePreview" class="image-preview" alt="Предпросмотр изображения">
+                            </div>
+                            <p class="modal-description">Для оптимального отображения на сайте рекомендуется использовать изображения в формате 1:1(Квадрат)</p>
+                            <input class="subbtn" type="submit" value="Подтвердить">
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
     <!-- шапка сайта -->
     <header>
         <div class="container">
@@ -42,7 +64,12 @@ session_start(); // тут начинается сессиия для сохра
         <div class="container">
             <div class="row">
                 <div class="col-10 d-flex justify-content-start align-items-center">
-                    <img class="profile-photo" src="крутая_ава.webp" alt="empty">
+                    <div class="avatar position-relative">
+                        <div class="edit position-absolute d-flex justify-content-center align-items-center" onclick="editProfile()">
+                            <i class="fas fa-pencil-alt"></i>
+                        </div>
+                        <img class="profile-photo" src="default-avatar.jpg" alt="empty">
+                    </div>
                     <div class="profile-info">
                         <p class="username"><?php echo htmlspecialchars($_SESSION['user']); ?></p>
                         <h2 class="reg-date"><?php echo htmlspecialchars($_SESSION['user_created_at']); ?></h2>
@@ -123,6 +150,7 @@ session_start(); // тут начинается сессиия для сохра
     </footer>
     <script src="js/profile.js"></script>
     <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/importmodal.js"></script>
 </body>
 
 </html>
