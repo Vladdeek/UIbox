@@ -14,6 +14,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     if ($user = $result->fetch_assoc()) {
         if (password_verify($password, $user['password'])) {
             $_SESSION['user'] = $user['username'];
+            $_SESSION['user_created_at'] = $user['createdAt'];
             header('Location: ../index.php');
         } else {
             echo "Неверный пароль!";

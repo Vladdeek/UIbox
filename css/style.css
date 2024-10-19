@@ -154,39 +154,57 @@ a.footer-text:hover {
 .date-post {
 	font-size: 10px;
 }
-.error-message {
-	color: red;
-	font-size: 14px;
-	margin-top: 10px;
-	margin-bottom: 10px;
-	display: none;
-}
 
-img.profile-photo {
+.avatar,
+.profile-photo,
+.edit {
 	width: 150px;
 	height: 150px;
-}
-.profile-photo {
 	border-radius: 50%;
 }
+.avatar {
+	position: relative;
+}
+.profile-photo {
+	object-fit: cover; /* Обрезает изображение так, чтобы оно вписывалось */
+}
+
+.edit {
+	position: absolute;
+	background-color: rgba(0, 0, 0, 0.5);
+	opacity: 0;
+	color: var(--color2);
+	font-size: 50px;
+	transition: 0.3s;
+}
+
+.avatar:hover .edit {
+	opacity: 1;
+}
+
 .profile-info {
 	height: 150px;
 	margin-left: 25px;
 }
+
 .username {
 	margin: 0;
 	font-size: 75px;
 	font-weight: 900;
 }
+
 .reg-date {
 	margin-top: -25px;
 	font-size: 15px;
 }
+
 @media (max-width: 768px) {
 	.username {
 		font-size: 50px; /* Размер шрифта для мобильных устройств */
 	}
-	img.profile-photo {
+	.avatar,
+	.profile-photo,
+	.edit {
 		width: 100px;
 		height: 100px;
 	}
@@ -239,12 +257,14 @@ img.profile-photo {
 }
 
 .mini-date-post,
-.mini-content-name {
+.mini-content-name,
+.mini-description {
 	margin-left: 2.5%;
 	width: 95%;
 	overflow-wrap: break-word; /* Позволяет переносить длинные слова */
 }
-.mini-date-post {
+.mini-date-post,
+.mini-description {
 	font-size: 10px;
 	margin-top: -10px;
 }
@@ -259,4 +279,27 @@ img.profile-photo {
 .self-projects {
 	display: none;
 	transition: 0.5s;
+}
+
+.section-image {
+	margin-bottom: 50px;
+	margin-top: 25px;
+	height: 175px;
+	width: 100%;
+	border-radius: 0 0 50px 0;
+	object-fit: cover;
+}
+@media (max-width: 768px) {
+	.section-image {
+		height: 135px;
+		margin-bottom: 25px;
+		margin-top: 0;
+	}
+}
+@media (max-width: 540px) {
+	.section-image {
+		height: 95px;
+		margin-bottom: 25px;
+		margin-top: 0;
+	}
 }
