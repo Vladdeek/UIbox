@@ -110,43 +110,51 @@ session_start(); // тут начинается сессиия для сохра
                     <div class="row">
 
                         <div class="col-xl-3 col-md-4 col-sm-6 col-6">
-                            <div class="mini-content d-flex flex-column justify-content-center">
-                                <div class="mini-photo-container mx-auto">
-                                    <img class="mini-photo" src="1.png" alt="EMPTY" />
+                            <a href="content.php" class="text-decoration-none text-dark">
+                                <div class="mini-content d-flex flex-column justify-content-center">
+                                    <div class="mini-photo-container mx-auto">
+                                        <img class="mini-photo" src="1.png" alt="EMPTY" />
+                                    </div>
+                                    <h1 class="mini-content-name text-start">Название продукта1</h1>
+                                    <h2 class="mini-description">Краткое описание</h2>
                                 </div>
-                                <h1 class="mini-content-name text-start">Название продукта1</h1>
-                                <h2 class="mini-description">Краткое описание</h2>
-                            </div>
+                            </a>
                         </div>
 
                         <div class="col-xl-3 col-md-4 col-sm-6 col-6">
-                            <div class="mini-content d-flex flex-column justify-content-center">
-                                <div class="mini-photo-container mx-auto">
-                                    <img class="mini-photo" src="1.png" alt="EMPTY" />
+                            <a href="content.php" class="text-decoration-none text-dark">
+                                <div class="mini-content d-flex flex-column justify-content-center">
+                                    <div class="mini-photo-container mx-auto">
+                                        <img class="mini-photo" src="1.png" alt="EMPTY" />
+                                    </div>
+                                    <h1 class="mini-content-name text-start">Название продукта1</h1>
+                                    <h2 class="mini-description">Краткое описание</h2>
                                 </div>
-                                <h1 class="mini-content-name text-start">Название продукта2</h1>
-                                <h2 class="mini-description">Краткое описание</h2>
-                            </div>
+                            </a>
                         </div>
 
                         <div class="col-xl-3 col-md-4 col-sm-6 col-6">
-                            <div class="mini-content d-flex flex-column justify-content-center">
-                                <div class="mini-photo-container mx-auto">
-                                    <img class="mini-photo" src="1.png" alt="EMPTY" />
+                            <a href="content.php" class="text-decoration-none text-dark">
+                                <div class="mini-content d-flex flex-column justify-content-center">
+                                    <div class="mini-photo-container mx-auto">
+                                        <img class="mini-photo" src="1.png" alt="EMPTY" />
+                                    </div>
+                                    <h1 class="mini-content-name text-start">Название продукта1</h1>
+                                    <h2 class="mini-description">Краткое описание</h2>
                                 </div>
-                                <h1 class="mini-content-name text-start">Название продукта3</h1>
-                                <h2 class="mini-description">Краткое описание</h2>
-                            </div>
+                            </a>
                         </div>
 
                         <div class="col-xl-3 col-md-4 col-sm-6 col-6">
-                            <div class="mini-content d-flex flex-column justify-content-center">
-                                <div class="mini-photo-container mx-auto">
-                                    <img class="mini-photo" src="1.png" alt="EMPTY" />
+                            <a href="content.php" class="text-decoration-none text-dark">
+                                <div class="mini-content d-flex flex-column justify-content-center">
+                                    <div class="mini-photo-container mx-auto">
+                                        <img class="mini-photo" src="1.png" alt="EMPTY" />
+                                    </div>
+                                    <h1 class="mini-content-name text-start">Название продукта1</h1>
+                                    <h2 class="mini-description">Краткое описание</h2>
                                 </div>
-                                <h1 class="mini-content-name text-start">Название продукта4</h1>
-                                <h2 class="mini-description">Краткое описание</h2>
-                            </div>
+                            </a>
                         </div>
 
                     </div>
@@ -161,7 +169,7 @@ session_start(); // тут начинается сессиия для сохра
         <div class="footer d-flex justify-content-center align-items-center">
             <p class="footer-text mb-0">2024 - 2024 © UIbox</p>
             <p class="footer-text mx-2 mb-0">∘</p>
-            <a href="#" class="footer-text mb-0">Privacy Policy and Cookies Policy</a>
+            <a href="Policy.php" class="footer-text mb-0">Privacy Policy and Cookies Policy</a>
             <p class="footer-text mx-2 mb-0">∘</p>
             <a href="#" class="footer-text mb-0">Telegram</a>
         </div>
