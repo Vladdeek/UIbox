@@ -67,7 +67,7 @@ session_start(); // тут начинается сессиия для сохра
 
                         <div class="col-xl-3 col-md-4 col-sm-6 col-6">
                             <a href="content.php" class="text-decoration-none text-dark">
-                                <?php include("ui/mini-content-card.php");?>\
+                                <?php include("ui/mini-content-card.php");?>
                             </a>
 
                             <div class="mini-content d-flex flex-column justify-content-center">

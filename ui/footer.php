@@ -3,5 +3,5 @@
     <p class="footer-text mx-2 mb-0">∘</p>
     <a href="Policy.php" class="footer-text mb-0">Privacy Policy and Cookies Policy</a>
     <p class="footer-text mx-2 mb-0">∘</p>
-    <a href="#" class="footer-text mb-0">Telegram</a>
+    <a href="telegram.php" class="footer-text mb-0">Telegram</a>
 </div>
