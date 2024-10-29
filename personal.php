@@ -25,7 +25,11 @@ session_start(); // тут начинается сессиия для сохра
                 <div class="blur-screen" onclick="hidemodal()"></div>
                 <div class="modal-window">
                     <div class="modal-container text-center">
+
                         <form class="edit-img" action="">
+
+                        <form action="">
+
                             <p class="modal-text">Выберите фото профиля</p>
                             <div class="upload d-flex flex-column align-items-center">
                                 <label for="file" class="upload-button">Загрузить фото</label>
@@ -35,11 +39,13 @@ session_start(); // тут начинается сессиия для сохра
                             <p class="modal-description">Для оптимального отображения на сайте рекомендуется использовать изображения в формате 1:1(Квадрат)</p>
                             <input class="subbtn" type="submit" value="Подтвердить">
                         </form>
+
                         <form class="add-content" action="">
                             <p class="modal-text">Добавить</p>
                             <p class="modal-description">Загрузка проходит тщательную проверку у администраторов</p>
                             <input class="subbtn" type="submit" value="Подтвердить">
                         </form>
+
                     </div>
                 </div>
             </div>

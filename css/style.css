@@ -188,6 +188,18 @@ a.footer-text:hover {
 	transition: 0.3s;
 }
 
+
+}
+
+.edit {
+	position: absolute;
+	background-color: rgba(0, 0, 0, 0.5);
+	opacity: 0;
+	color: var(--color2);
+	font-size: 50px;
+	transition: 0.3s;
+}
+
 .avatar:hover .edit {
 	opacity: 1;
 }
@@ -303,7 +315,11 @@ a.footer-text:hover {
 	display: none;
 	transition: 0.5s;
 }
+
 .catalog-image,
+
+
+
 .section-image {
 	margin-bottom: 50px;
 	margin-top: 25px;
@@ -312,6 +328,7 @@ a.footer-text:hover {
 	border-radius: 0 0 50px 0;
 	object-fit: cover;
 }
+
 .catalog-image {
 	border-radius: 10px;
 	border: solid var(--color1) 2px;
@@ -319,6 +336,9 @@ a.footer-text:hover {
 }
 @media (max-width: 768px) {
 	.catalog-image,
+
+@media (max-width: 768px) {
+
 	.section-image {
 		height: 135px;
 		margin-bottom: 25px;
@@ -326,13 +346,17 @@ a.footer-text:hover {
 	}
 }
 @media (max-width: 540px) {
+
 	.catalog-image,
+
+
 	.section-image {
 		height: 95px;
 		margin-bottom: 25px;
 		margin-top: 0;
 	}
 }
+
 
 .paid-btn,
 .free-btn {
@@ -352,3 +376,4 @@ a.footer-text:hover {
 	background-color: var(--color1); /* цвет полоски, можно изменить на свой */
 	margin: 20px 0; /* отступы сверху и снизу */
 }
+

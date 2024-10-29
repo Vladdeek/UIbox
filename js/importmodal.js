@@ -1,6 +1,7 @@
 // Анимация появления модального окна
 let modalwindow = document.querySelector('.modal-window')
 let blurscreen = document.querySelector('.blur-screen')
+
 let editimgform = document.querySelector('.edit-img')
 let addcontentform = document.querySelector('.add-content')
 
@@ -19,6 +20,10 @@ function editProfile() {
 }
 function addcontent() {
 	addcontentform.style.display = 'block'
+
+=======
+
+function editProfile() {
 
 	modalwindow.style.visibility = 'visible'
 	modalwindow.style.opacity = '1'
@@ -39,6 +44,7 @@ function hidemodal() {
 		editimgform.style.display = 'none'
 		addcontentform.style.display = 'none'
 	}, 250)
+
 }
 
 const fileInput = document.getElementById('file')
