@@ -35,7 +35,14 @@ session_start(); // тут начинается сессиия для сохра
 
     <!-- основное содержимое сайта -->
     <section>
-        
+        <div class="container">
+            <div class="row">
+                <div class="col-12 justify-content-center d-flex">
+                    <?php include("ui/tg-card.php")?>
+                    <?php include("ui/tg-card.php")?>
+                </div>
+            </div>
+        </div>
     </section>
 
     <!-- футер -->
