@@ -82,13 +82,19 @@ h1 {
 	font-size: 30px;
 	font-weight: 600;
 }
+li,
 h2 {
 	color: var(--text-color);
 	padding: 10px 0;
 	font-size: 20px;
 	font-weight: 300;
 }
-
+h3 {
+	color: var(--text-color); /* Цвет текста, можно изменить на свой */
+	margin-bottom: 15px; /* Отступ снизу для разделения с другими элементами */
+	font-weight: 500;
+	font-size: 25px;
+}
 .bg {
 	background-color: aqua;
 	width: 100%;
@@ -126,6 +132,8 @@ a.footer-text:hover {
 	height: auto;
 	width: 95%;
 }
+.free-content,
+.paid-content,
 .content {
 	margin: 30px 0;
 	background-color: var(--color2);
@@ -138,6 +146,8 @@ a.footer-text:hover {
 	overflow-wrap: break-word; /* Позволяет переносить длинные слова */
 	transition: 0.2s;
 }
+.free-content:hover,
+.paid-content:hover,
 .content:hover {
 	border: solid rgba(0, 0, 0, 0.5) 1px;
 	transform: scale(1.005);
@@ -167,6 +177,18 @@ a.footer-text:hover {
 }
 .profile-photo {
 	object-fit: cover; /* Обрезает изображение так, чтобы оно вписывалось */
+}
+
+.edit {
+	position: absolute;
+	background-color: rgba(0, 0, 0, 0.5);
+	opacity: 0;
+	color: var(--color2);
+	font-size: 50px;
+	transition: 0.3s;
+}
+
+
 }
 
 .edit {
@@ -237,7 +259,7 @@ a.footer-text:hover {
 	object-fit: cover; /* Изображение сохраняет соотношение сторон и заполняет контейнер */
 	border-radius: 7px;
 }
-
+.add-btn,
 .mini-content {
 	margin: 30px 0;
 	background-color: var(--color2);
@@ -250,12 +272,25 @@ a.footer-text:hover {
 	overflow-wrap: break-word; /* Позволяет переносить длинные слова */
 	transition: 0.2s;
 }
+.add-btn {
+	height: 252px;
+}
+.add-btn:hover,
 .mini-content:hover {
 	border: solid rgba(0, 0, 0, 0.5) 1px;
 	transform: scale(1.005);
 	transition: 0.2s;
 }
-
+.add-btn-img {
+	height: 100px;
+	width: 100px;
+	opacity: 0.05;
+	transition: 0.2s;
+	color: var(--color1);
+}
+.add-btn:hover .add-btn-img {
+	opacity: 1;
+}
 .mini-date-post,
 .mini-content-name,
 .mini-description {
@@ -281,6 +316,10 @@ a.footer-text:hover {
 	transition: 0.5s;
 }
 
+.catalog-image,
+
+
+
 .section-image {
 	margin-bottom: 50px;
 	margin-top: 25px;
@@ -289,7 +328,17 @@ a.footer-text:hover {
 	border-radius: 0 0 50px 0;
 	object-fit: cover;
 }
+
+.catalog-image {
+	border-radius: 10px;
+	border: solid var(--color1) 2px;
+	padding: 3px;
+}
 @media (max-width: 768px) {
+	.catalog-image,
+
+@media (max-width: 768px) {
+
 	.section-image {
 		height: 135px;
 		margin-bottom: 25px;
@@ -297,9 +346,34 @@ a.footer-text:hover {
 	}
 }
 @media (max-width: 540px) {
+
+	.catalog-image,
+
+
 	.section-image {
 		height: 95px;
 		margin-bottom: 25px;
 		margin-top: 0;
 	}
 }
+
+
+.paid-btn,
+.free-btn {
+	margin-right: 2.5%;
+	height: 30px;
+	width: 150px;
+	font-size: 17.5px;
+	text-decoration: none;
+	border-radius: 5px;
+	border: none;
+	background-color: var(--color1);
+	color: var(--color2);
+}
+.separator {
+	width: 100%;
+	height: 1px; /* высота полоски */
+	background-color: var(--color1); /* цвет полоски, можно изменить на свой */
+	margin: 20px 0; /* отступы сверху и снизу */
+}
+

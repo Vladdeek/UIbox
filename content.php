@@ -87,19 +87,6 @@ session_start(); // тут начинается сессиия для сохра
                 </div>
             </div>
         </div>
-
-        <div class="container">
-            <div class="row justify-content-center">
-                <div class="col-xl-10 col-sm-12 d-flex justify-content-center">
-                    <div class="lang-bar">
-                        <a class="bar-button" href="afterlang.php">CSS</a>
-                        <a class="bar-button" href="afterlang.php">HTML</a>
-                        <a class="bar-button" href="afterlang.php">JavaScript</a>
-                        <a class="bar-button" href="afterlang.php">Other</a>
-                    </div>
-                </div>
-            </div>
-        </div>
     </header>
 
     <!-- основное содержимое сайта -->
@@ -108,11 +95,11 @@ session_start(); // тут начинается сессиия для сохра
             <div class="row justify-content-center">
                 <div class="col-xl-7 col-md-10 col-sm-12 d-flex justify-content-start">
                     <div class="welcome">
-                        <h1 class="text-start">Welcome to UIbox!</h1>
+                        <img class="catalog-image" src="3.png" alt="empty">
+                        <h1 class="text-start">Название категории</h1>
                         <h2 class="text-start">
-                            Откройте для себя нашу тщательно отобранную коллекцию из фрагментов кода в HTML, CSS, JavaScript и других языках. Эти ресурсы предназначены для того, чтобы помочь вам в разработке интерфейсов, независимо от вашего уровня опыта.
+                            В этой категории представлена информация, касающаяся ключевых аспектов темы, которая будет интересна и полезна для наших пользователей. Мы постарались охватить все важные моменты и представить их в доступной форме, чтобы каждый мог легко разобраться и найти нужные ответы.
                         </h2>
-                        <h2 class="text-start">Начинайте создавать и вдохновляйтесь.</h2>
                     </div>
                 </div>
             </div>
@@ -121,31 +108,36 @@ session_start(); // тут начинается сессиия для сохра
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col-xl-7 col-md-10 col-sm-12 d-flex justify-content-center flex-column">
-                    <div class="content flex-column justify-content-center d-flex">
+                    <div class="free-content flex-column justify-content-center d-flex">
                         <img class="photo mx-auto" src="1.png" alt="EMPTY" />
                         <h1 class="content-name text-start">Название продукта1</h1>
                         <h2 class="content-description text-start">
                             Описание — это краткое изложение основных характеристик или особенностей какого-либо предмета, события, ситуации или продукта. Оно помогает дать читателю или слушателю...
                         </h2>
-                        <h2 class="date-post">September 27, 2005</h2>
+                        <div class="row">
+                            <div class="col">
+                                <h2 class="date-post">September 27, 2005</h2>
+                            </div>
+                            <div class="col d-flex justify-content-end">
+                                <a href="demo-code.html" class="free-btn text-center">Demo and code</a>
+                            </div>
+                        </div>
                     </div>
 
-                    <div class="content flex-column justify-content-center d-flex">
+                    <div class="paid-content flex-column justify-content-center d-flex">
                         <img class="photo mx-auto" src="2.png" alt="EMPTY" />
                         <h1 class="content-name text-start">Название продукта2</h1>
                         <h2 class="content-description text-start">
                             Описание — это краткое изложение основных характеристик или особенностей какого-либо предмета, события, ситуации или продукта. Оно помогает дать читателю или слушателю...
                         </h2>
-                        <h2 class="date-post">October 15, 2013</h2>
-                    </div>
-
-                    <div class="content flex-column justify-content-center d-flex">
-                        <img class="photo mx-auto" src="3.png" alt="EMPTY" />
-                        <h1 class="content-name text-start">Название продукта3</h1>
-                        <h2 class="content-description text-start">
-                            Описание — это краткое изложение основных характеристик или особенностей какого-либо предмета, события, ситуации или продукта. Оно помогает дать читателю или слушателю...
-                        </h2>
-                        <h2 class="date-post">October 14, 2024</h2>
+                        <div class="row">
+                            <div class="col">
+                                <h2 class="date-post">September 27, 2005</h2>
+                            </div>
+                            <div class="col d-flex justify-content-end">
+                                <a href="pay.html" class="paid-btn text-center">Купить</a>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
