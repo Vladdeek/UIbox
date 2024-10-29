@@ -19,55 +19,12 @@ session_start(); // тут начинается сессиия для сохра
 </head>
 
 <body>
-    <div class="container">
-        <div class="row justify-content-center">
-            <div class="col-12 d-flex justify-content-center">
-                <div class="blur-screen" onclick="hidemodal()"></div>
-                <div class="modal-window">
-                    <div class="modal-container text-center">
+    <!-- модальное окно для входа и регистрации -->
+    <?php include("ui/auth-modal.php");?>
 
-                        <form class="edit-img" action="">
-
-                        <form action="">
-
-                            <p class="modal-text">Выберите фото профиля</p>
-                            <div class="upload d-flex flex-column align-items-center">
-                                <label for="file" class="upload-button">Загрузить фото</label>
-                                <input type="file" id="file" class="file-input" accept="image/*">
-                                <img id="imagePreview" class="image-preview" alt="Предпросмотр изображения">
-                            </div>
-                            <p class="modal-description">Для оптимального отображения на сайте рекомендуется использовать изображения в формате 1:1(Квадрат)</p>
-                            <input class="subbtn" type="submit" value="Подтвердить">
-                        </form>
-
-                        <form class="add-content" action="">
-                            <p class="modal-text">Добавить</p>
-                            <p class="modal-description">Загрузка проходит тщательную проверку у администраторов</p>
-                            <input class="subbtn" type="submit" value="Подтвердить">
-                        </form>
-
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
     <!-- шапка сайта -->
     <header>
-        <div class="container">
-            <div class="row justify-content-center">
-                <div class="col-12 d-flex justify-content-center">
-                    <div class="title-bar d-flex align-items-center justify-content-between">
-                        <a href="index.php" class="name">UIbox</a>
-                        <?php if (isset($_SESSION['user'])): ?>
-                            <span class="auth-username ms-auto"><?php echo htmlspecialchars($_SESSION['user']); ?></span>
-                            <a href="request/logout.php" class="auth-btn ms-2">Выйти</a>
-                        <?php else: ?>
-                            <button class="auth-btn ms-auto" onclick="modalanim()">Вход | Регистрация</button>
-                        <?php endif; ?>
-                    </div>
-                </div>
-            </div>
-        </div>
+        <?php include("ui/header.php");?>
     </header>
 
     <!-- основное содержимое сайта -->
@@ -79,7 +36,7 @@ session_start(); // тут начинается сессиия для сохра
                         <div class="edit position-absolute d-flex justify-content-center align-items-center" onclick="editProfile()">
                             <i class="fas fa-pencil-alt"></i>
                         </div>
-                        <img class="profile-photo" src="default-avatar.jpg" alt="empty">
+                        <img class="profile-photo" src="img/default-avatar.jpg" alt="empty">
                     </div>
                     <div class="profile-info">
                         <p class="username"><?php echo htmlspecialchars($_SESSION['user']); ?></p>
@@ -102,31 +59,13 @@ session_start(); // тут начинается сессиия для сохра
             <div class="container">
                 <div class="row">
                     <div class="col-xl-2 col-md-4 col-sm-6">
-                        <div class="mini-content col-xl-2 col-md-4 col-sm-6 flex-column justify-content-center d-flex">
-                            <div class="mini-photo-container mx-auto">
-                                <img class="mini-photo" src="1.png" alt="EMPTY" />
-                            </div>
-                            <h1 class="mini-content-name text-start">Название продукта1</h1>
-                            <h2 class="mini-date-post">September 27, 2005</h2>
-                        </div>
+                        <?php include("ui/mini-content-card.php");?>
                     </div>
                     <div class="col-xl-2 col-md-4 col-sm-6">
-                        <div class="mini-content col-xl-2 col-md-4 col-sm-6 flex-column justify-content-center d-flex">
-                            <div class="mini-photo-container mx-auto">
-                                <img class="mini-photo" src="1.png" alt="EMPTY" />
-                            </div>
-                            <h1 class="mini-content-name text-start">Название продукта1</h1>
-                            <h2 class="mini-date-post">September 27, 2005</h2>
-                        </div>
+                        <?php include("ui/mini-content-card.php");?>
                     </div>
                     <div class="col-xl-2 col-md-4 col-sm-6">
-                        <div class="mini-content col-xl-2 col-md-4 col-sm-6 flex-column justify-content-center d-flex">
-                            <div class="mini-photo-container mx-auto">
-                                <img class="mini-photo" src="1.png" alt="EMPTY" />
-                            </div>
-                            <h1 class="mini-content-name text-start">Название продукта1</h1>
-                            <h2 class="mini-date-post">September 27, 2005</h2>
-                        </div>
+                        <?php include("ui/mini-content-card.php");?>
                     </div>
                 </div>
             </div>
@@ -136,19 +75,17 @@ session_start(); // тут начинается сессиия для сохра
             <div class="container">
                 <div class="row">
                     <div class="col-xl-2 col-md-4 col-sm-6">
-                        <div class="mini-content col-xl-2 col-md-4 col-sm-6 flex-column justify-content-center d-flex">
-                            <div class="mini-photo-container mx-auto">
-                                <img class="mini-photo" src="1.png" alt="EMPTY" />
-                            </div>
-                            <h1 class="mini-content-name text-start">Название продукта1</h1>
-                            <h2 class="mini-date-post">September 27, 2005</h2>
-                        </div>
+                        <?php include("ui/mini-content-card.php");?>
                     </div>
+                    
 
+                    <div class="col-xl-2 col-md-4 col-sm-6">
+                        <?php include("ui/mini-content-card.php");?>
+                    </div>
                     
                     <div class="col-xl-2 col-md-4 col-sm-6">
                         <div class="add-btn col-xl-2 col-md-4 col-sm-6 flex-column justify-content-center d-flex" onclick="addcontent()">
-                            <img class="add-btn-img mx-auto" src="addbtn1.png" alt="empty">
+                            <img class="add-btn-img mx-auto" src="img/addbtn.png" alt="empty">
                         </div>
                     </div>
                 </div>
@@ -158,13 +95,7 @@ session_start(); // тут начинается сессиия для сохра
 
     <!-- футер -->
     <footer>
-        <div class="footer d-flex justify-content-center align-items-center">
-            <p class="footer-text mb-0">2024 - 2024 © UIbox</p>
-            <p class="footer-text mx-2 mb-0">∘</p>
-            <a href="Policy.php" class="footer-text mb-0">Privacy Policy and Cookies Policy</a>
-            <p class="footer-text mx-2 mb-0">∘</p>
-            <a href="#" class="footer-text mb-0">Telegram</a>
-        </div>
+        <?php include("ui/footer.php");?>
     </footer>
     <script src="js/profile.js"></script>
     <script src="js/bootstrap.bundle.min.js"></script>
